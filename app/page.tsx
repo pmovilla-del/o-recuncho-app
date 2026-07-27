@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
+import Excursions from "@/components/Excursions";
 
 export default function Home() {
   return (
@@ -43,7 +44,6 @@ export default function Home() {
 
 
 
-
       {/* Servicios */}
       <section id="servicios">
         <Services />
@@ -51,75 +51,7 @@ export default function Home() {
 
 
 
-
-      {/* Distancias */}
-      <section className="py-20 px-6 bg-gray-50">
-
-        <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Distancias desde O Recuncho
-          </h2>
-
-
-          <div className="grid md:grid-cols-4 gap-6">
-
-
-            <div className="bg-white rounded-xl p-6 text-center shadow">
-              <h3 className="text-xl font-bold">
-                📍 Maceda
-              </h3>
-              <p className="mt-3 text-gray-600">
-                En el propio municipio.
-                Servicios y comercios cercanos.
-              </p>
-            </div>
-
-
-            <div className="bg-white rounded-xl p-6 text-center shadow">
-              <h3 className="text-xl font-bold">
-                ♨️ Ourense
-              </h3>
-              <p className="mt-3 text-gray-600">
-                20 minutos.
-                Termas, gastronomía y ciudad.
-              </p>
-            </div>
-
-
-            <div className="bg-white rounded-xl p-6 text-center shadow">
-              <h3 className="text-xl font-bold">
-                🏘️ Allariz
-              </h3>
-              <p className="mt-3 text-gray-600">
-                25 minutos.
-                Villa histórica y paseo fluvial.
-              </p>
-            </div>
-
-
-            <div className="bg-white rounded-xl p-6 text-center shadow">
-              <h3 className="text-xl font-bold">
-                🍷 Ribeira Sacra
-              </h3>
-              <p className="mt-3 text-gray-600">
-                Excursión imprescindible.
-                Miradores y monasterios.
-              </p>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-
-
-      {/* Lugares cercanos con fotos */}
+      {/* Entorno */}
       <section className="py-20 px-6">
 
         <div className="max-w-6xl mx-auto">
@@ -130,7 +62,7 @@ export default function Home() {
           </h2>
 
 
-          <p className="text-center text-gray-600 text-lg mb-12">
+          <p className="text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
             Desde O Recuncho podrás conocer algunos de los rincones más
             especiales de Ourense y la Ribeira Sacra.
           </p>
@@ -140,20 +72,21 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
-
             <Place
               image="/places/allariz.jpg"
               title="Allariz"
               distance="A unos 25 minutos"
-              text="Una de las villas más bonitas de Galicia, con casco histórico, río, paseos y gastronomía."
+              text="Una de las villas más bonitas de Galicia, con casco histórico, río, paseos, tiendas y gastronomía."
+              maps="https://maps.google.com/?q=Allariz+Ourense"
             />
 
 
             <Place
               image="/places/ourense.jpg"
-              title="Ourense"
+              title="Ourense termal"
               distance="A unos 20 minutos"
-              text="Ciudad termal con aguas calientes, patrimonio, restaurantes y ambiente gallego."
+              text="Ciudad termal con las Burgas, aguas calientes, Catedral, restaurantes y ambiente gallego."
+              maps="https://maps.google.com/?q=Ourense+Galicia"
             />
 
 
@@ -162,22 +95,25 @@ export default function Home() {
               title="Ribeira Sacra"
               distance="Excursión imprescindible"
               text="Miradores, viñedos, monasterios y paisajes únicos sobre los ríos Sil y Miño."
-            />
+              maps="https://maps.google.com/?q=Ribeira+Sacra"
+                        />
 
 
             <Place
               image="/places/rio-mao.jpg"
-              title="Río Mao"
+              title="Pasarelas del Río Mao"
               distance="Ruta de naturaleza"
-              text="Pasarelas, senderos y naturaleza en uno de los rincones más espectaculares de Galicia."
+              text="Una ruta espectacular entre bosques, pasarelas de madera y paisajes de la Ribeira Sacra."
+              maps="https://maps.google.com/?q=Pasarelas+Rio+Mao"
             />
 
 
             <Place
               image="/places/san-pedro.jpg"
-              title="San Pedro"
+              title="San Pedro de Rocas"
               distance="Patrimonio cercano"
-              text="Historia, arquitectura tradicional y tranquilidad gallega."
+              text="Un lugar único para descubrir la Galicia más antigua, su historia y arquitectura tradicional."
+              maps="https://maps.google.com/?q=San+Pedro+de+Rocas"
             />
 
 
@@ -185,7 +121,8 @@ export default function Home() {
               image="/places/santa-cristina.jpg"
               title="Santa Cristina de Ribas de Sil"
               distance="Ribeira Sacra"
-              text="Monasterio histórico rodeado de bosque y uno de los lugares más especiales de la zona."
+              text="Monasterio histórico rodeado de bosque, uno de los rincones más especiales de la zona."
+              maps="https://maps.google.com/?q=Monasterio+Santa+Cristina+de+Ribas+de+Sil"
             />
 
 
@@ -198,9 +135,14 @@ export default function Home() {
 
 
 
+      {/* Excursiones */}
+      <Excursions />
 
 
-      {/* Experiencia */}
+
+
+
+      {/* Experiencia gallega */}
       <section className="py-20 px-6 bg-gray-50">
 
         <div className="max-w-6xl mx-auto">
@@ -214,33 +156,48 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
 
 
+
             <div className="bg-white rounded-xl p-8 shadow">
+
               <h3 className="text-xl font-bold mb-3">
                 🌿 Naturaleza
               </h3>
+
               <p className="text-gray-600">
-                Senderismo, montañas, ríos y paisajes para desconectar.
+                Senderismo, montañas, ríos y paisajes para desconectar
+                y disfrutar de la tranquilidad de Galicia.
               </p>
+
             </div>
 
 
+
             <div className="bg-white rounded-xl p-8 shadow">
+
               <h3 className="text-xl font-bold mb-3">
                 🍷 Gastronomía
               </h3>
+
               <p className="text-gray-600">
-                Productos locales, vinos gallegos y restaurantes cercanos.
+                Productos locales, vinos gallegos y restaurantes cercanos
+                donde descubrir los sabores de Ourense.
               </p>
+
             </div>
 
 
+
             <div className="bg-white rounded-xl p-8 shadow">
+
               <h3 className="text-xl font-bold mb-3">
                 🏰 Cultura
               </h3>
+
               <p className="text-gray-600">
-                Castillos, monasterios y pueblos con encanto.
+                Castillos, monasterios, pueblos con encanto y la historia
+                de una Galicia auténtica.
               </p>
+
             </div>
 
 
@@ -249,13 +206,7 @@ export default function Home() {
 
         </div>
 
-      </section>
-
-
-
-
-
-      {/* Reserva */}
+      </section>       {/* Reserva */}
       <section
         id="ubicacion"
         className="py-24 px-6 bg-black text-white text-center"
@@ -276,7 +227,7 @@ export default function Home() {
           href="https://www.booking.com/hotel/es/o-recuncho-maceda.es.html"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold"
+          className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-gray-200 transition"
         >
           Reservar ahora
         </a>
@@ -291,19 +242,26 @@ export default function Home() {
 
 
 
+
+
 function Place({
   image,
   title,
   distance,
   text,
+  maps,
 }: {
   image: string;
   title: string;
   distance: string;
   text: string;
+  maps: string;
 }) {
+
   return (
+
     <div className="bg-white rounded-2xl overflow-hidden shadow">
+
 
       <img
         src={image}
@@ -311,22 +269,39 @@ function Place({
         className="w-full h-64 object-cover"
       />
 
+
       <div className="p-6">
+
 
         <h3 className="text-2xl font-bold mb-2">
           {title}
         </h3>
 
+
         <p className="text-sm font-semibold mb-3">
           📍 {distance}
         </p>
 
-        <p className="text-gray-600">
+
+        <p className="text-gray-600 mb-5">
           {text}
         </p>
 
+
+        <a
+          href={maps}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition"
+        >
+          📍 Ver en Google Maps
+        </a>
+
+
       </div>
 
+
     </div>
+
   );
 }
