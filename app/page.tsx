@@ -25,7 +25,11 @@ export default function Home() {
             Ourense. Un lugar perfecto para descansar, desconectar y vivir
             la esencia de Galicia.
           </p>
-
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Con capacidad de hasta cuatro personas, totalmente equipada
+           ofrece un espacio acogedor para quienes buscan una estancia tranquila,
+           pero con todos los servicios necesarios cerca
+          </p>
           <p className="text-lg text-gray-700 mt-5 leading-relaxed">
             Su ubicación permite disfrutar de naturaleza, gastronomía,
             cultura y excursiones a lugares únicos como Allariz,
