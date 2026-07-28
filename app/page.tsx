@@ -1,7 +1,8 @@
 import Hero from "@/components/Hero";
-import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
-import Excursions from "@/components/Excursions";
+import Restaurants from "@/components/Restaurants";
+import BasicServices from "@/components/BasicServices";
+import Supermarkets from "@/components/Supermarkets";
 
 export default function Home() {
   return (
@@ -37,16 +38,10 @@ export default function Home() {
 
 
 
-      {/* Galería */}
-      <section id="galeria">
-        <Gallery />
-      </section>
-
-
 
       {/* Servicios */}
       <section id="servicios">
-        <Services />
+    
       </section>
 
 
@@ -56,7 +51,15 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto">
 
+{/* Servicios */}
+<section id="servicios">
+</section>
 
+<Restaurants />
+<Supermarkets />
+<BasicServices />
+
+{/* Descubre nuestro entorno */}
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
             Descubre nuestro entorno
           </h2>
@@ -136,7 +139,6 @@ export default function Home() {
 
 
       {/* Excursiones */}
-      <Excursions />
 
 
 

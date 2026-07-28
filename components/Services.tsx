@@ -1,9 +1,5 @@
 const services = [
-  {
-    icon: "🍽️",
-    title: "Restaurantes y gastronomía",
-    text: "Disfruta de la cocina gallega en restaurantes y bares de Maceda."
-  },
+
   {
     icon: "🛒",
     title: "Supermercados",
