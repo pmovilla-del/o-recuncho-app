@@ -34,7 +34,7 @@ const restaurants = [
     image: "/restaurants/a-tapa.jpg",
     address: "Av. dos Milagros · Maceda",
     description:
-      "Un clásico de Maceda para disfrutar de cocina tradicional gallega, tapas y raciones en un ambiente cercano.",
+      "Cuenta con una amplia carta de desayunos, bocadillos, hamburguesas especiales y una gran cantidad de tapas y raciones en un ambiente cercano.",
     maps: "https://maps.google.com/?q=A+Tapa+Maceda",
   },
   {
@@ -61,7 +61,7 @@ const restaurants = [
     image: "/restaurants/cervexeria.jpg",
     address: "Maceda",
     description:
-      "Un lugar ideal para tomar una cerveza, un vino o un refresco acompañado de tapas y raciones. Dispone de terraza y es uno de los puntos de encuentro más populares del municipio.",
+      "Un lugar ideal para tomar una cerveza, un vino,  un refresco o unas copas. Dispone de terraza y es uno de los puntos de encuentro más populares del municipio.",
     maps: "https://maps.google.com/?q=Cervexeria+Maceda",
   },
   {
@@ -73,23 +73,61 @@ const restaurants = [
       "Cafetería ideal para desayunar, tomar un café o disfrutar de una cerveza acompañada de los pinchos que sirven con la consumición. Dispone de terraza y es uno de los establecimientos más frecuentados de Maceda.",
     maps: "https://maps.google.com/?q=Kilometro+Cero+Maceda",
   },
-];
+  {
+    name: "Café Bar Castillo",
+    type: "☕ Cafetería · Bar · Restaurante",
+    image: "/restaurants/castillo.jpg",
+    address: "As Canteiras, 1 · Maceda",
+    description:
+      "Un establecimiento muy popular en Maceda donde disfrutar de desayunos, menú del día, tapas y cocina casera en un ambiente familiar. Dispone de terraza y es una excelente opción tanto para comer como para tomar algo.",
+    maps: "https://maps.google.com/?q=Café+Bar+Castillo+Maceda",
+  },
+  {
+    name: "Ondo Aspas",
+    type: "🍽 Bar · Restaurante",
+    image: "/restaurants/ondo-aspas.jpg",
+    address: "Maceda",
+    description:
+      "Para disfrutar de una café, una cerveza o lo que quieras, dispone de una agradable terraza.",
+    maps: "https://maps.google.com/?q=Ondo+Aspas+Maceda",
+  },
+  {
+    name: "Casa Rosa",
+    type: "🍽 Restaurante",
+    image: "/restaurants/casa-rosa.jpg",
+    address: "Maceda",
+    description:
+      "Disfruta de sus pizzas, hamburguesas, y diversas raciones en un ambiente agradable.",
+    maps: "https://maps.google.com/?q=Casa+Rosa+Maceda",
+  },
+  {
+    name: "A Sala",
+    type: "☕ Bar · Cafetería",
+    image: "/restaurants/a-sala.jpg",
+    address: "Maceda",
+    description:
+      "Ideal para desayunar, tomar un café, pizzas artesanas, tapas, platos combinados o una copa.",
+    maps: "https://maps.google.com/?q=A+Sala+Maceda",
+  },
+  ];
 
 export default function Restaurants() {
   return (
-    <section className="py-24 bg-stone-100">
+    <section className="bg-stone-100 py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="text-center">
+
           <h2 className="text-5xl font-bold text-green-900">
             Dónde comer y tomar algo
           </h2>
 
-          <p className="mt-5 max-w-3xl mx-auto text-lg text-gray-600">
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-gray-600">
             Desde O Recuncho podrás descubrir la oferta gastronómica de
             Maceda, con restaurantes, taperías, cafeterías y terrazas donde
             disfrutar de la cocina gallega y del ambiente del municipio.
           </p>
+
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -131,7 +169,7 @@ export default function Restaurants() {
                   href={restaurant.maps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex rounded-full bg-green-800 px-6 py-3 text-white font-semibold transition hover:bg-green-900"
+                  className="mt-8 inline-flex rounded-full bg-green-800 px-6 py-3 font-semibold text-white transition hover:bg-green-900"
                 >
                   📍 Ver en Google Maps
                 </a>

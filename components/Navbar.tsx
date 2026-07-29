@@ -1,46 +1,67 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "/", label: "Inicio" },
+    { href: "/entorno", label: "Entorno" },
+    { href: "/restaurantes", label: "Dónde comer" },
+    { href: "/compras", label: "Compras" },
+    { href: "/servicios", label: "Servicios" },
+    { href: "/excursiones", label: "Excursiones" },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur shadow-sm">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header className="sticky top-0 z-50 bg-white shadow">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-        <div className="text-xl font-bold">
+        <Link
+          href="/"
+          className="text-2xl font-bold text-green-900"
+        >
           O Recuncho
-        </div>
+        </Link>
 
-        <div className="flex items-center gap-6">
+        <nav className="hidden gap-8 md:flex">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-medium text-gray-700 hover:text-green-700 transition"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
 
-          <a
-            href="#inicio"
-            className="hover:text-gray-600 transition"
-          >
-            Inicio
-          </a>
+        <button
+          className="md:hidden"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
-          <a
-            href="#alojamiento"
-            className="hover:text-gray-600 transition"
-          >
-            Alojamiento
-          </a>
-
-          <a
-            href="#contacto"
-            className="hover:text-gray-600 transition"
-          >
-            Contacto
-          </a>
-
-          <a
-            href="https://www.booking.com/hotel/es/o-recuncho-maceda.es.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-black text-white px-5 py-2 rounded-full hover:bg-gray-800 transition"
-          >
-            Reservar
-          </a>
-
-        </div>
       </div>
-    </nav>
+
+      {open && (
+        <nav className="border-t bg-white md:hidden">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="block border-b px-6 py-4 hover:bg-stone-100"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 }
