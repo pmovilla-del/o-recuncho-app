@@ -5,10 +5,10 @@ export default function RestaurantesPage() {
   return (
     <main>
 
-      <section className="relative overflow-hidden bg-green-950 py-24 text-white">
-        <div className="relative max-w-6xl mx-auto px-6">
+      <section className="bg-green-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-5xl font-bold">
             Dónde comer y tomar algo
           </h1>
 
@@ -19,7 +19,7 @@ export default function RestaurantesPage() {
 
           <Link
             href="/"
-            className="inline-flex items-center mt-12 rounded-full bg-white px-8 py-4 font-semibold text-green-900 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-stone-100 hover:shadow-2xl"
+            className="inline-block mt-10 rounded-full bg-white px-6 py-3 font-semibold text-green-900 transition hover:bg-stone-100"
           >
             ← Volver al inicio
           </Link>

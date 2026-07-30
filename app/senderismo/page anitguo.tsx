@@ -60,15 +60,15 @@ const routes = [
 
 export default function Senderismo() {
   return (
-    <section className="py-24 bg-stone-50">
+    <section className="py-24 bg-stone-100">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-green-900">
+          <h1 className="text-5xl font-bold text-green-900">
             Rutas de senderismo
           </h1>
 
-          <p className="mt-6 max-w-3xl mx-auto text-xl leading-9 text-gray-600">
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600">
             Descubre paseos familiares, rutas de montaña y caminos rodeados de
             naturaleza a pocos minutos de O Recuncho.
           </p>
@@ -80,7 +80,7 @@ export default function Senderismo() {
 
             <article
               key={route.name}
-              className="overflow-hidden rounded-[30px] bg-white ring-1 ring-stone-200/70 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              className="overflow-hidden rounded-3xl bg-white shadow-lg hover:shadow-2xl transition"
             >
 
               <Image
@@ -88,13 +88,12 @@ export default function Senderismo() {
                 alt={route.name}
                 width={900}
                 height={600}
-                sizes="(max-width:768px)100vw,(max-width:1280px)50vw,33vw"
-                className="h-64 w-full object-cover transition duration-700 hover:scale-105"
+                className="h-64 w-full object-cover"
               />
 
               <div className="p-7">
 
-                <h2 className="text-3xl font-bold tracking-tight">
+                <h2 className="text-2xl font-bold">
                   {route.name}
                 </h2>
 
@@ -113,7 +112,7 @@ export default function Senderismo() {
                   href={route.maps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex rounded-full bg-green-800 px-7 py-3.5 text-white font-semibold shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-green-900 hover:shadow-2xl"
+                  className="mt-8 inline-flex rounded-full bg-green-800 px-6 py-3 text-white font-semibold hover:bg-green-900 transition"
                 >
                   📍 Ver en Google Maps
                 </a>

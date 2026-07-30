@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const patrimonio = [
   {
@@ -71,11 +70,11 @@ export default function EntornoPage() {
   return (
     <main>
 
-      <section className="relative overflow-hidden bg-green-950 py-24 text-white">
+      <section className="bg-green-900 py-20 text-white">
 
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-6xl px-6">
 
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-5xl font-bold">
             Descubre nuestro entorno
           </h1>
 
@@ -87,7 +86,7 @@ export default function EntornoPage() {
 
           <Link
             href="/"
-            className="mt-12 inline-flex items-center rounded-full bg-white px-8 py-4 font-semibold text-green-900 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-stone-100 hover:shadow-2xl"
+            className="mt-10 inline-block rounded-full bg-white px-6 py-3 font-semibold text-green-900 hover:bg-stone-100 transition"
           >
             ← Volver al inicio
           </Link>
@@ -286,17 +285,13 @@ function Place({
   maps,
 }: PlaceProps) {
   return (
-    <article className="overflow-hidden rounded-[30px] bg-white ring-1 ring-stone-200/70 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <article className="overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
-      <div className="relative h-64 overflow-hidden">
-      <Image
+      <img
         src={image}
         alt={title}
-        fill
-        sizes="(max-width:768px) 100vw, (max-width:1280px) 50vw, 33vw"
-        className="object-cover transition duration-700 hover:scale-105"
+        className="h-64 w-full object-cover"
       />
-      </div>
 
       <div className="p-7">
 

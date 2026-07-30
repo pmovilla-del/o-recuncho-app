@@ -9,23 +9,23 @@ export default function Home() {
       <Hero />
 
 {/* Presentación */}
-<section className="py-20 px-6">
-  <div className="max-w-5xl mx-auto text-center">
+<section className="py-16 md:py-20 px-6 bg-stone-50">
+  <div className="max-w-4xl mx-auto text-center">
 
-    <h2 className="text-4xl md:text-5xl font-bold mb-8">
+    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-green-900 mb-6">
       O Recuncho, alojamiento tranquilo en Galicia
     </h2>
 
-    <p className="text-lg text-gray-700 leading-relaxed">
+    <p className="text-xl leading-9 text-gray-600">
       Descubre un alojamiento acogedor en Maceda, en el corazón de
       Ourense. Un lugar perfecto para descansar, desconectar y vivir
       la esencia de Galicia.
     </p>
 
-    <p className="mt-5 text-lg text-gray-700 leading-relaxed">
+    <p className="mt-5 text-xl leading-9 text-gray-600">
       Con capacidad para cuatro personas y una ubicación privilegiada,
       O Recuncho es el punto de partida perfecto para descubrir la
-      Ribeira Sacra, Allariz, Ourense y la Serra de San Mamede.
+      Ribeira Sacra, Allariz, Ourense y la Sierra de San Mamede.
     </p>
 
   </div>
@@ -35,7 +35,7 @@ export default function Home() {
   {/* Reserva */}
       <section
         id="ubicacion"
-        className="py-24 px-6 bg-black text-white text-center"
+ className="py-24 px-6 bg-gradient-to-br from-green-950 via-green-900 to-black text-white text-center"
       >
 
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -43,7 +43,7 @@ export default function Home() {
         </h2>
 
 
-        <p className="max-w-2xl mx-auto text-lg mb-10">
+        <p className="max-w-3xl mx-auto text-lg mb-10">
           Descubre Galicia desde un alojamiento tranquilo,
           cómodo y perfectamente situado.
         </p>
@@ -53,7 +53,11 @@ export default function Home() {
           href="https://www.booking.com/hotel/es/o-recuncho-maceda.es.html"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-gray-200 transition"
+          className="inline-block bg-white text-green-900
+hover:bg-stone-100
+shadow-xl
+hover:shadow-2xl
+duration-500 px-10 py-4 rounded-full font-semibold hover:bg-gray-200 transition"
         >
           Reservar ahora
         </a>
@@ -65,4 +69,5 @@ export default function Home() {
     </main>
   );
 }
- 
+ import Footer from "@/components/Footer";
+ <Footer />

@@ -45,14 +45,14 @@ export default function BasicServices() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-24 bg-stone-50">
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-3xl font-semibold text-center mb-4">
+        <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-center mb-6">
           Servicios básicos cerca de O Recuncho
         </h2>
 
-        <p className="text-center text-gray-600 mb-12">
+        <p className="mx-auto max-w-3xl text-center text-xl leading-9 text-gray-600 mb-16">
           Todo lo necesario durante tu estancia lo encontrarás en el centro de Maceda.
         </p>
 
@@ -61,18 +61,18 @@ export default function BasicServices() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition"
+              className="group rounded-[30px] bg-white ring-1 ring-stone-200/70 p-8 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
             >
 
-              <div className="text-3xl mb-3">
+              <div className="text-5xl mb-5">
                 {service.icon}
               </div>
 
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-2xl font-bold tracking-tight mb-4 text-green-900">
                 {service.title}
               </h3>
 
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="rounded-xl bg-stone-100 px-4 py-3 text-gray-700 font-medium mb-8">
                 📍 {service.address}
               </p>
 
@@ -80,7 +80,7 @@ export default function BasicServices() {
                 href={service.maps}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-blue-600 hover:underline"
+                className="inline-flex items-center rounded-full bg-green-800 px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-green-900 hover:shadow-2xl"
               >
                 Ver en Google Maps →
               </a>

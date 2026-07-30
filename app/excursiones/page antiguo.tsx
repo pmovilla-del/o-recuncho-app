@@ -82,15 +82,15 @@ const plans = [
 
 export default function Excursiones() {
   return (
-    <section className="bg-stone-50 py-24">
+    <section className="bg-stone-100 py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-green-900">
+          <h1 className="text-5xl font-bold text-green-900">
             Excursiones desde O Recuncho
           </h1>
 
-          <p className="mt-8 max-w-3xl mx-auto text-xl leading-9 text-gray-600">
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600">
             Te proponemos diferentes planes según el tiempo del que dispongas
             para que aproveches al máximo tu estancia en Maceda y el interior
             de Galicia.
@@ -102,15 +102,14 @@ export default function Excursiones() {
           {plans.map((plan) => (
             <div
               key={plan.title}
-              className={`overflow-hidden rounded-[30px] bg-white ring-1 ring-stone-200/70 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl lg:grid lg:grid-cols-2 ${plans.indexOf(plan)%2===1?"lg:[&>*:first-child]:order-2":""}`}
+              className="overflow-hidden rounded-3xl bg-white shadow-xl lg:grid lg:grid-cols-2"
             >
               <div className="relative h-80">
                 <Image
                   src={plan.image}
                   alt={plan.title}
                   fill
-                  sizes="(max-width:768px)100vw,(max-width:1280px)50vw,33vw"
-                  className="object-cover transition duration-700 hover:scale-105"
+                  className="object-cover"
                 />
               </div>
 
@@ -118,7 +117,7 @@ export default function Excursiones() {
 
                 <div className="text-5xl">{plan.icon}</div>
 
-                <h2 className="mt-4 text-3xl font-bold tracking-tight text-green-900">
+                <h2 className="mt-4 text-3xl font-bold text-green-900">
                   {plan.title}
                 </h2>
 
@@ -145,7 +144,7 @@ export default function Excursiones() {
 
         </div>
 
-        <div className="mt-20 rounded-[30px] bg-green-900 p-12 text-center text-white shadow-xl">
+        <div className="mt-20 rounded-3xl bg-green-900 text-white p-10 text-center">
           <h2 className="text-3xl font-bold">
             💡 Consejo de O Recuncho
           </h2>

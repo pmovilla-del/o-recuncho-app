@@ -5,10 +5,10 @@ export default function ComprasPage() {
   return (
     <main>
 
-      <section className="relative overflow-hidden bg-green-950 py-24 text-white">
-        <div className="relative mx-auto max-w-6xl px-6">
+      <section className="bg-green-900 py-20 text-white">
+        <div className="mx-auto max-w-6xl px-6">
 
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-5xl font-bold">
             Supermercados y panaderías
           </h1>
 
@@ -20,7 +20,7 @@ export default function ComprasPage() {
 
           <Link
             href="/"
-            className="mt-12 inline-flex items-center rounded-full bg-white px-8 py-4 font-semibold text-green-900 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-stone-100 hover:shadow-2xl"
+            className="mt-10 inline-block rounded-full bg-white px-6 py-3 font-semibold text-green-900 transition hover:bg-stone-100"
           >
             ← Volver al inicio
           </Link>

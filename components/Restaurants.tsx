@@ -25,12 +25,12 @@ const restaurants = [
     image: "/restaurants/fenda.jpg",
     address: "Rúa Aureliano Ferreiro, 3 · Maceda",
     description:
-      "Local acogedor especializado en tapas y raciones con un ambiente agradable para disfrutar de una comida o cena informal.",
+      "Local acogedor especializado en tapas y pizzas con un ambiente agradable para disfrutar de una comida o cena informal.",
     maps: "https://maps.google.com/?q=A+Fenda+Maceda",
   },
   {
     name: "A Tapa",
-    type: "🍽 Restaurante",
+    type: "🍽 Restaurante, bar, cafetería",
     image: "/restaurants/a-tapa.jpg",
     address: "Av. dos Milagros · Maceda",
     description:
@@ -48,7 +48,7 @@ const restaurants = [
   },
   {
     name: "Mioco",
-    type: "🍔 Restaurante informal",
+    type: "🍔 Restaurante informal, bar, cafetería",
     image: "/restaurants/mioco.jpg",
     address: "Praza das Toldas · Maceda",
     description:
@@ -84,7 +84,7 @@ const restaurants = [
   },
   {
     name: "Ondo Aspas",
-    type: "🍽 Bar · Restaurante",
+    type: "☕ Bar · Cafetería",
     image: "/restaurants/ondo-aspas.jpg",
     address: "Maceda",
     description:
@@ -93,7 +93,7 @@ const restaurants = [
   },
   {
     name: "Casa Rosa",
-    type: "🍽 Restaurante",
+    type: "🍽 Restaurante, bar, cafetería",
     image: "/restaurants/casa-rosa.jpg",
     address: "Maceda",
     description:
@@ -113,16 +113,16 @@ const restaurants = [
 
 export default function Restaurants() {
   return (
-    <section className="bg-stone-100 py-24">
+    <section className="bg-stone-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="text-center">
 
-          <h2 className="text-5xl font-bold text-green-900">
+          <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-green-900">
             Dónde comer y tomar algo
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg text-gray-600">
+          <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-gray-600">
             Desde O Recuncho podrás descubrir la oferta gastronómica de
             Maceda, con restaurantes, taperías, cafeterías y terrazas donde
             disfrutar de la cocina gallega y del ambiente del municipio.
@@ -136,15 +136,16 @@ export default function Restaurants() {
 
             <article
               key={restaurant.name}
-              className="overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="group overflow-hidden rounded-[30px] bg-white ring-1 ring-stone-200/70 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
             >
 
               <Image
+                sizes="(max-width:768px) 100vw, (max-width:1280px) 50vw, 33vw"
                 src={restaurant.image}
                 alt={restaurant.name}
                 width={900}
                 height={600}
-                className="h-64 w-full object-cover"
+                className="h-80 w-full object-cover transition duration-700 group-hover:scale-105"
               />
 
               <div className="p-7">
@@ -153,11 +154,11 @@ export default function Restaurants() {
                   {restaurant.name}
                 </h3>
 
-                <p className="mt-2 text-sm font-semibold text-green-700">
+                <p className="mt-3 inline-flex rounded-full bg-green-100 px-4 py-1 text-sm font-semibold text-green-800">
                   {restaurant.type}
                 </p>
 
-                <p className="mt-3 font-medium text-gray-700">
+                <p className="mt-5 rounded-xl bg-stone-100 px-4 py-3 font-medium text-gray-700">
                   📍 {restaurant.address}
                 </p>
 
@@ -169,7 +170,7 @@ export default function Restaurants() {
                   href={restaurant.maps}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex rounded-full bg-green-800 px-6 py-3 font-semibold text-white transition hover:bg-green-900"
+                  className="mt-8 inline-flex items-center rounded-full bg-green-800 px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-green-900 hover:shadow-2xl"
                 >
                   📍 Ver en Google Maps
                 </a>

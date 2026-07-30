@@ -8,7 +8,6 @@ const cards = [
       "Restaurantes, taperías, cafeterías y terrazas donde disfrutar de la gastronomía de Maceda.",
     image: "/cards/comer.png",
     href: "/restaurantes",
-    emoji: "🍽️",
     external: false,
   },
   {
@@ -17,7 +16,6 @@ const cards = [
       "Supermercados, panaderías y comercios para hacer la compra durante tu estancia.",
     image: "/cards/compras.png",
     href: "/compras",
-    emoji: "🛒",
     external: false,
   },
   {
@@ -26,7 +24,6 @@ const cards = [
       "Farmacias, centro de salud, taxis, cajeros y todos los servicios necesarios.",
     image: "/cards/servicios.png",
     href: "/servicios",
-    emoji: "💊",
     external: false,
   },
   {
@@ -35,7 +32,6 @@ const cards = [
       "Allariz, Ribeira Sacra, Ourense y algunos de los lugares más espectaculares de Galicia.",
     image: "/cards/entorno.png",
     href: "/entorno",
-    emoji: "🌄",
     external: false,
   },
   {
@@ -44,33 +40,38 @@ const cards = [
       "Rutas de medio día, un día o varios días para descubrir Galicia desde O Recuncho.",
     image: "/cards/excursiones.png",
     href: "/excursiones",
-    emoji: "🚗",
     external: false,
   },
   {
-  title: "Rutas de senderismo",
-  description:
-    "Paseos familiares y rutas de montaña para descubrir la naturaleza que rodea Maceda.",
-  image: "/cards/senderismo.png",
-  href: "/senderismo",
-  emoji: "🥾",
-  external: false,
-},
- 
+    title: "Rutas de senderismo",
+    description:
+      "Paseos familiares y rutas de montaña para descubrir la naturaleza que rodea Maceda.",
+    image: "/cards/senderismo.png",
+    href: "/senderismo",
+    external: false,
+  },
+  {
+    title: "Nuestras tradiciones",
+    description:
+      "Fiestas, ferias y costumbres que mantienen viva la esencia de Maceda.",
+    image: "/cards/tradiciones.png",
+    href: "/tradiciones",
+    external: false,
+  },
 ];
 
 export default function QuickAccess() {
   return (
-    <section className="bg-stone-100 py-24">
+    <section className="fade-up bg-stone-50 py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="mx-auto mb-16 max-w-4xl text-center">
+        <div className="mx-auto mb-14 max-w-4xl text-center">
 
-          <h2 className="text-5xl font-bold text-green-900">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-green-900">
             Todo lo que necesitas durante tu estancia
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-5 text-xl leading-9 text-gray-600">
             Descubre los mejores lugares para comer, hacer la compra,
             encontrar servicios esenciales y visitar algunos de los rincones
             más bonitos de Ourense y la Ribeira Sacra.
@@ -78,41 +79,44 @@ export default function QuickAccess() {
 
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
 
           {cards.map((card) => {
 
             const Card = (
-              <div className="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+  <div className="group overflow-hidden rounded-[30px] bg-white ring-1 ring-stone-200/60 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl fade-up">
 
-                <div className="relative h-60">
+                <div className="relative h-60 overflow-hidden">
 
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-110"
-                  />
+<Image
+  src={card.image}
+  alt={card.title}
+  fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+  className="object-cover transition-all duration-700 group-hover:scale-105"
+/>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-                  <div className="absolute left-6 top-6 text-5xl">
+                  <div className="absolute left-6 top-6 text-4xl drop-shadow-lg">
                     {card.emoji}
                   </div>
 
                 </div>
 
-                <div className="p-8">
+                <div className="p-9">
 
-                  <h3 className="text-2xl font-bold text-green-900">
+                  <div className="mb-4 h-1 w-14 rounded-full bg-green-700" />
+
+                  <h3 className="text-3xl font-bold tracking-tight text-green-900">
                     {card.title}
                   </h3>
 
-                  <p className="mt-4 leading-7 text-gray-600">
+                  <p className="mt-5 text-[17px] leading-8 text-gray-600">
                     {card.description}
                   </p>
 
-                  <div className="mt-8 inline-flex items-center rounded-full bg-green-800 px-6 py-3 font-semibold text-white transition group-hover:bg-green-900">
+                  <div className="mt-8 inline-flex items-center rounded-full bg-green-800 px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-500 group-hover:translate-x-1 group-hover:bg-green-900">
                     Explorar →
                   </div>
 
