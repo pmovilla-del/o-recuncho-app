@@ -98,10 +98,6 @@ export default function QuickAccess() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-                  <div className="absolute left-6 top-6 text-4xl drop-shadow-lg">
-                    {card.emoji}
-                  </div>
-
                 </div>
 
                 <div className="p-9">
