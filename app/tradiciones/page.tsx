@@ -18,7 +18,7 @@ const traditions = [
     description:
       "Una de las celebraciones más singulares del municipio, donde tradición y participación popular convierten las calles de Maceda en una gran fiesta.",
     text:
-      "La Baixada da Marela forma parte de la identidad del pueblo y es una cita muy esperada por vecinos y visitantes. Música, alegría y tradición se unen en una jornada inolvidable.",
+      "La Marela, figura simbólica, es la protagonista de un ritual festivo del entroido de Maceda. Si lo has vivido una vez es probable que repitas",
   },
   {
     title: "As Feiras de Maceda",
@@ -27,7 +27,7 @@ const traditions = [
     description:
       "Las ferias tradicionales siguen siendo uno de los principales puntos de encuentro de la comarca.",
     text:
-      "En ellas podrás encontrar productos locales, artesanía, alimentación, comercio tradicional y disfrutar del ambiente auténtico de un pueblo gallego que mantiene vivas sus costumbres.",
+      "En ellas podrás encontrar productos locales, artesanía, alimentación, comercio tradicional y disfrutar del ambiente auténtico de un pueblo gallego que mantiene vivas sus costumbres. Se celebran los días 4 y 20 de cada mes (Si el 20 cae en Domingo, se pasa al sábado 19)",
   },
   {
     title: "Entroido Quente",

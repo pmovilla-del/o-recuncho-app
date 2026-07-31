@@ -21,7 +21,7 @@ const restaurants = [
   },
   {
     name: "A Fenda Tapería",
-    type: "🥘 Tapería",
+    type: "🥘 Tapería, bar",
     image: "/restaurants/fenda.jpg",
     address: "Rúa Aureliano Ferreiro, 3 · Maceda",
     description:
@@ -66,7 +66,7 @@ const restaurants = [
   },
   {
     name: "Kilómetro Cero",
-    type: "☕ Cafetería",
+    type: "☕ Cafetería, bar",
     image: "/restaurants/kilometro-cero.jpg",
     address: "Rúa Aureliano Ferreiro · Maceda",
     description:
@@ -102,7 +102,7 @@ const restaurants = [
   },
   {
     name: "A Sala",
-    type: "☕ Bar · Cafetería",
+    type: "☕ Bar restaurante· Cafetería",
     image: "/restaurants/a-sala.jpg",
     address: "Maceda",
     description:
